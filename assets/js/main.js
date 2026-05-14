@@ -143,3 +143,24 @@
 			});
 
 })(jQuery);
+
+function playHoverVideo(container) {
+
+	const iframe = container.querySelector('.hover-video');
+
+	if (!iframe.src) {
+		iframe.src = iframe.dataset.src;
+	}
+
+	container.classList.add('playing');
+}
+
+function stopHoverVideo(container) {
+
+	const iframe = container.querySelector('.hover-video');
+
+	container.classList.remove('playing');
+
+	// Stops the video completely
+	iframe.src = '';
+}
