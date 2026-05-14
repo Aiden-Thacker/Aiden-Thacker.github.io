@@ -161,6 +161,5 @@ function stopHoverVideo(container) {
 
 	container.classList.remove('playing');
 
-	// Stops the video completely
-	iframe.src = '';
+	iframe.src = iframe.src;
 }
